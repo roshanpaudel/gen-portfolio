@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(210, 250, 253);
+  --primary-color: rgb(196, 251, 255);
   --secondary-color: orangered;
   --shadow-values: 0 1px 20px 1px rgba(0, 0, 0, 0.384);
 }
@@ -126,17 +126,15 @@ body {
   margin: 0;
   padding: 0;
 }
-.skill-header {
+.title-header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.underline {
-  height: 3px;
-  width: 60px;
-  background-color: var(--secondary-color);
+.title-header > h2 {
+  box-shadow: 0 4px 0 red;
 }
+
 .skill-icons {
   margin-top: 50px;
   display: flex;
