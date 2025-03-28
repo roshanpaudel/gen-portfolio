@@ -1,6 +1,7 @@
 :root {
   --primary-color: rgb(210, 250, 253);
   --secondary-color: orangered;
+  --shadow-values: 0 1px 20px 1px rgba(0, 0, 0, 0.384);
 }
 
 body {
@@ -14,8 +15,8 @@ body {
   display: flex;
   justify-content: space-between;
   background: var(--primary-color);
-  padding: 0 20vw;
-  box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.384);
+  padding: 0 22vw;
+  box-shadow: var(--shadow-values);
 }
 .nav-title {
   display: flex;
@@ -40,13 +41,14 @@ body {
   position: relative;
   margin-left: 22vw;
   margin-right: 22vw;
-  padding: 50px 170px;
+  padding: 60px 170px;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
 }
 .banner > button {
-  width: 8rem;
+  width: 9rem;
+  height: 2.5rem;
   background: rgb(44, 44, 44);
   color: white;
   padding: 4px;
@@ -64,4 +66,99 @@ body {
   position: absolute;
   top: 10px;
   right: 28vw;
+}
+
+/* badge */
+.badge {
+  margin-left: 22vw;
+  margin-right: 22vw;
+  margin-top: 5rem;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-values);
+}
+.skillset {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.skillset > p {
+  display: flex;
+  color: white;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 5px;
+  width: 5px;
+  margin-left: 25px;
+  margin-right: 15px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+
+.skill-name > p {
+  align-items: center;
+  margin: 6px;
+}
+
+.divider {
+  width: 2px;
+  background-color: gray;
+  height: 40px;
+}
+.skill-property {
+  color: var(--secondary-color);
+}
+
+/* skills  */
+.skill {
+  margin: 50px 22vw;
+  display: flex;
+  flex-direction: column;
+}
+.skill-header * {
+  margin: 0;
+  padding: 0;
+}
+.skill-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.underline {
+  height: 3px;
+  width: 60px;
+  background-color: var(--secondary-color);
+}
+.skill-icons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-text > i {
+  transform: scale(2);
+}
+.fa-html5 {
+  color: rgb(255, 145, 0);
+}
+.fa-css {
+  color: rgb(53, 53, 241);
+}
+.fa-js {
+  color: rgb(233, 196, 32);
+}
+.fa-figma {
+  color: purple;
 }
