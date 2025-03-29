@@ -64,7 +64,7 @@ body {
 .image > img {
   width: 350px;
   position: absolute;
-  top: 10px;
+  top: 140px;
   right: 28vw;
 }
 
@@ -72,7 +72,7 @@ body {
 .badge {
   margin-left: 22vw;
   margin-right: 22vw;
-  margin-top: 5rem;
+  margin-top: 80px;
   border: 1px solid black;
   border-radius: 20px;
   height: auto;
@@ -118,15 +118,16 @@ body {
 
 /* skills  */
 .skill {
-  margin: 50px 22vw;
+  margin: 0px 22vw;
   display: flex;
   flex-direction: column;
 }
-.skill-header * {
+/* .skill-header * {
   margin: 0;
   padding: 0;
-}
+} */
 .title-header {
+  margin: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +137,6 @@ body {
 }
 
 .skill-icons {
-  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -159,4 +159,64 @@ body {
 }
 .fa-figma {
   color: purple;
+}
+
+/* my project  */
+
+.my-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 22vw;
+  gap: 2vw;
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-values);
+}
+.projects-card > img {
+  width: 26vw;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.tech-link {
+  margin-top: 15px;
+  align-self: center;
+}
+.tech-link .fa-github,
+.fa-chrome {
+  color: black;
+  padding: 10px;
+}
+
+.project-info {
+  margin-left: 50px;
+}
+
+/* about-me  */
+
+.about-container {
+  background: rgb(94, 185, 94);
+}
+.about-me {
+  display: flex;
+  margin: 0 22vw;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.my-photo > img {
+  width: 350px;
+  height: auto;
+}
+.my-details {
+  display: flex;
+  flex-direction: column;
+}
+.interest {
+  display: flex;
+  gap: 20px;
 }
