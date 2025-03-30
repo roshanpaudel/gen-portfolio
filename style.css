@@ -3,13 +3,16 @@
   --secondary-color: orangered;
   --shadow-values: 0 1px 20px 1px rgba(0, 0, 0, 0.384);
 }
-
+.page-container > * {
+  margin: 0 22vw;
+}
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background: var(--primary-color);
 }
+
 /* <!-- navbar --> */
 .navbar {
   display: flex;
@@ -29,6 +32,7 @@ body {
   list-style-type: none;
   gap: 1rem;
 }
+
 /* <!-- hero --> */
 .hero {
   margin-top: 150px;
@@ -39,8 +43,7 @@ body {
 }
 .banner {
   position: relative;
-  margin-left: 22vw;
-  margin-right: 22vw;
+
   padding: 60px 170px;
   background-color: var(--secondary-color);
   display: flex;
@@ -70,8 +73,6 @@ body {
 
 /* badge */
 .badge {
-  margin-left: 22vw;
-  margin-right: 22vw;
   margin-top: 80px;
   border: 1px solid black;
   border-radius: 20px;
@@ -118,14 +119,10 @@ body {
 
 /* skills  */
 .skill {
-  margin: 0px 22vw;
   display: flex;
   flex-direction: column;
 }
-/* .skill-header * {
-  margin: 0;
-  padding: 0;
-} */
+
 .title-header {
   margin: 50px 0;
   display: flex;
@@ -167,17 +164,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 22vw;
   gap: 2vw;
 }
 
 .projects-card {
   display: flex;
+  width: 26vw;
   flex-direction: column;
   box-shadow: var(--shadow-values);
 }
 .projects-card > img {
-  width: 26vw;
+  width: auto;
   height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -193,7 +190,7 @@ body {
 }
 
 .project-info {
-  margin-left: 50px;
+  padding: 0 50px;
 }
 
 /* about-me  */
