@@ -1,25 +1,66 @@
+/* google fonts  */
+
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  box-sizing: border-box;
+}
 :root {
   --primary-color: rgb(196, 251, 255);
+  --bright-color: rgb(196, 251, 255);
+  --dark-color: #2a2a2a;
+
   --secondary-color: orangered;
+  --text-color: var(--dark-color);
+  --dark-text-color: white;
   --shadow-values: 0 1px 20px 1px rgba(0, 0, 0, 0.384);
-}
-.page-container > * {
-  margin: 0 22vw;
+  --green-bg: rgb(94, 185, 94);
 }
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.wrapper {
   background: var(--primary-color);
+  color: var(--text-color);
+}
+[for="darkmode"] {
+  position: fixed;
+  top: 7rem;
+  left: 3rem;
+}
+[for="darkmode"]:hover {
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+
+.page-container > * {
+  margin: 0 22vw;
+}
+/* dark mode toggle */
+#darkmode:checked + .wrapper {
+  --primary-color: var(--dark-color);
+  --text-color: var(--dark-text-color);
+  --secondary-color: rgb(141, 39, 2);
+  --green-bg: rgb(3, 63, 3);
+}
+#darkmode {
+  display: none;
 }
 
 /* <!-- navbar --> */
 .navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background: var(--primary-color);
   padding: 0 22vw;
   box-shadow: var(--shadow-values);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .nav-title {
   display: flex;
@@ -31,6 +72,18 @@ body {
   justify-content: space-between;
   list-style-type: none;
   gap: 1rem;
+  font-weight: bold;
+}
+.name {
+  font-family: "Borel", cursive;
+  font-weight: 1000;
+  transform: scale(1.4);
+}
+.slash {
+  color: var(--secondary-color);
+  font-weight: 1000;
+  transform: scale(1.4);
+  padding: 0 5px;
 }
 
 /* <!-- hero --> */
@@ -131,7 +184,7 @@ body {
 }
 
 .title-header > h2 {
-  box-shadow: 0 4px 0 red;
+  box-shadow: 0 4px 0 var(--secondary-color);
 }
 
 .skill-icons {
@@ -197,7 +250,7 @@ body {
 /* about-me  */
 
 .about-container {
-  background: rgb(94, 185, 94);
+  background: var(--green-bg);
 }
 
 .about-title {
