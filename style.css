@@ -44,7 +44,7 @@ body {
 .banner {
   position: relative;
 
-  padding: 60px 170px;
+  padding: 3vw 10vw;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@ body {
   box-shadow: var(--shadow-values);
 }
 .skillset {
-  padding: 10px 20px;
+  padding: 10px 1vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -129,6 +129,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .title-header > h2 {
   box-shadow: 0 4px 0 red;
 }
@@ -198,22 +199,104 @@ body {
 .about-container {
   background: rgb(94, 185, 94);
 }
+
+.about-title {
+  padding-top: 50px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .about-me {
   display: flex;
   margin: 0 22vw;
   justify-content: space-between;
   gap: 50px;
+  padding-bottom: 50px;
 }
 
 .my-photo > img {
-  width: 350px;
+  width: 380px;
   height: auto;
 }
 .my-details {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
 }
 .interest {
   display: flex;
-  gap: 20px;
+  gap: 1vw;
+}
+
+/* contact */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.contact-title {
+  margin-bottom: 20px;
+}
+.contact-links > i {
+  margin: 0 10px;
+  font-size: xx-large;
+}
+
+.email > input {
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+}
+.email {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 22px;
+}
+.email > a {
+  color: white;
+  text-decoration: none;
+}
+
+.fa-paper-plane {
+  font-size: x-small;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+/* footer  */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  color: white;
+}
+.footer-links-socials {
+  display: flex;
+  gap: 80px;
+}
+
+.footer * ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer * a {
+  text-decoration: none;
+  color: gray;
+}
+.footer * a:hover {
+  color: var(--secondary-color);
+}
+
+.copyright {
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
