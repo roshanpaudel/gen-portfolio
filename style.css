@@ -16,6 +16,21 @@
   --dark-text-color: white;
   --shadow-values: 0 1px 20px 1px rgba(0, 0, 0, 0.384);
   --green-bg: rgb(94, 185, 94);
+  --border-color: gray;
+}
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+a {
+  color: inherit;
+  text-decoration: none; /* Removes underlines */
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   box-sizing: border-box;
@@ -39,12 +54,14 @@ body {
 .page-container > * {
   margin: 0 22vw;
 }
+
 /* dark mode toggle */
 #darkmode:checked + .wrapper {
   --primary-color: var(--dark-color);
   --text-color: var(--dark-text-color);
   --secondary-color: rgb(141, 39, 2);
   --green-bg: rgb(3, 63, 3);
+  --border-color: rgb(190, 190, 190);
 }
 #darkmode {
   display: none;
@@ -74,6 +91,10 @@ body {
   gap: 1rem;
   font-weight: bold;
 }
+.nav-link > ul > li:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
 .name {
   font-family: "Borel", cursive;
   font-weight: 1000;
@@ -96,13 +117,12 @@ body {
 }
 .banner {
   position: relative;
-
   padding: 3vw 10vw;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
 }
-.banner > button {
+.banner button {
   width: 9rem;
   height: 2.5rem;
   background: rgb(44, 44, 44);
@@ -127,13 +147,15 @@ body {
 /* badge */
 .badge {
   margin-top: 80px;
-  border: 1px solid black;
+  margin-bottom: 50px;
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: var(--shadow-values);
+  flex-wrap: wrap;
 }
 .skillset {
   padding: 10px 1vw;
@@ -163,7 +185,7 @@ body {
 
 .divider {
   width: 2px;
-  background-color: gray;
+  background-color: var(--border-color);
   height: 40px;
 }
 .skill-property {
@@ -171,13 +193,9 @@ body {
 }
 
 /* skills  */
-.skill {
-  display: flex;
-  flex-direction: column;
-}
 
 .title-header {
-  margin: 50px 0;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,6 +208,8 @@ body {
 .skill-icons {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 .icon-text {
   display: flex;
@@ -213,7 +233,9 @@ body {
 }
 
 /* my project  */
-
+.projects {
+  margin-top: 50px;
+}
 .my-projects {
   display: flex;
   flex-wrap: wrap;
@@ -226,6 +248,7 @@ body {
   width: 26vw;
   flex-direction: column;
   box-shadow: var(--shadow-values);
+  border-radius: 5px;
 }
 .projects-card > img {
   width: auto;
@@ -279,6 +302,17 @@ body {
 .interest {
   display: flex;
   gap: 1vw;
+  padding: 4px;
+}
+.interest > span {
+  padding: 4px;
+}
+.interest > span:hover {
+  background-color: gray;
+  border-radius: 3px;
+  transform: scale(1.2);
+  transition: all 1s;
+  cursor: pointer;
 }
 
 /* contact */
@@ -309,6 +343,7 @@ body {
   color: white;
   padding: 10px;
   border-radius: 22px;
+  box-shadow: var(--shadow-values);
 }
 .email > a {
   color: white;
@@ -352,4 +387,17 @@ body {
 .copyright {
   padding-top: 50px;
   padding-bottom: 20px;
+}
+
+.go-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+.go-up > a {
+  font-size: larger;
+  box-shadow: var(--shadow-values);
+  padding: 16px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
 }
