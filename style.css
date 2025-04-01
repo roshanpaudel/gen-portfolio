@@ -1,7 +1,6 @@
 /* google fonts  */
 
-@import url("https://fonts.googleapis.com/css2?family=Borel&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   font-family: "Noto Sans", sans-serif;
   box-sizing: border-box;
@@ -25,6 +24,10 @@
   display: flex;
   align-items: center;
 }
+
+.grid {
+  display: grid;
+}
 a {
   color: inherit;
   text-decoration: none; /* Removes underlines */
@@ -36,6 +39,12 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 1400px;
 }
 .wrapper {
   background: var(--primary-color);
@@ -49,10 +58,6 @@ body {
 [for="darkmode"]:hover {
   transform: scale(1.3);
   transition: all 0.3s;
-}
-
-.page-container > * {
-  margin: 0 22vw;
 }
 
 /* dark mode toggle */
@@ -69,18 +74,20 @@ body {
 
 /* <!-- navbar --> */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: var(--primary-color);
-  padding: 0 22vw;
   box-shadow: var(--shadow-values);
   position: sticky;
   top: 0;
   z-index: 10;
 }
+
+.navigation {
+  justify-content: space-between;
+}
+.menu-link {
+  display: none;
+}
 .nav-title {
-  display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
@@ -96,7 +103,7 @@ body {
   cursor: pointer;
 }
 .name {
-  font-family: "Borel", cursive;
+  font-family: "Ephesis", cursive;
   font-weight: 1000;
   transform: scale(1.4);
 }
@@ -108,19 +115,28 @@ body {
 }
 
 /* <!-- hero --> */
+#home {
+  padding-top: 150px;
+}
 .hero {
-  margin-top: 150px;
+  background-color: var(--secondary-color);
+  grid-template-areas: "banner image";
 }
 .banner > * {
   margin: 5px;
   padding: 0;
 }
 .banner {
-  position: relative;
+  grid-area: banner;
+  align-content: center;
   padding: 3vw 10vw;
-  background-color: var(--secondary-color);
-  display: flex;
   flex-direction: column;
+}
+.image {
+  grid-area: image;
+  justify-content: end;
+  align-items: center;
+  margin-top: -5rem;
 }
 .banner button {
   width: 9rem;
@@ -138,10 +154,7 @@ body {
   font-size: x-large;
 }
 .image > img {
-  width: 350px;
-  position: absolute;
-  top: 140px;
-  right: 28vw;
+  width: 400px;
 }
 
 /* badge */
@@ -151,8 +164,6 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 20px;
   height: auto;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   box-shadow: var(--shadow-values);
   flex-wrap: wrap;
@@ -160,7 +171,6 @@ body {
 .skillset {
   padding: 10px 1vw;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 .skillset > p {
@@ -193,10 +203,11 @@ body {
 }
 
 /* skills  */
-
+.skills-section {
+  padding-top: 50px;
+}
 .title-header {
   margin-bottom: 50px;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -206,15 +217,12 @@ body {
 }
 
 .skill-icons {
-  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 50px;
 }
 .icon-text {
-  display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .icon-text > i {
   transform: scale(2);
@@ -234,31 +242,27 @@ body {
 
 /* my project  */
 .projects {
-  margin-top: 50px;
+  padding: 50px 0;
 }
-.my-projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2vw;
+.projects .my-projects {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4vw;
 }
 
 .projects-card {
-  display: flex;
-  width: 26vw;
-  flex-direction: column;
   box-shadow: var(--shadow-values);
   border-radius: 5px;
+  padding-bottom: 3rem;
 }
 .projects-card > img {
-  width: auto;
+  width: 100%;
   height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
 .tech-link {
   margin-top: 15px;
-  align-self: center;
+  text-align: center;
 }
 .tech-link .fa-github,
 .fa-chrome {
@@ -274,33 +278,30 @@ body {
 
 .about-container {
   background: var(--green-bg);
+  padding-top: 50px;
 }
 
 .about-title {
-  padding-top: 50px;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
 .about-me {
-  display: flex;
-  margin: 0 22vw;
   justify-content: space-between;
   gap: 50px;
   padding-bottom: 50px;
 }
 
 .my-photo > img {
-  width: 380px;
+  width: calc(150px + 10vw);
   height: auto;
 }
 .my-details {
-  padding-top: 50px;
-  display: flex;
+  padding-top: 5px;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .interest {
-  display: flex;
   gap: 1vw;
   padding: 4px;
 }
@@ -318,9 +319,7 @@ body {
 /* contact */
 
 .contact {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   padding-bottom: 50px;
 }
 
@@ -360,14 +359,11 @@ body {
 /* footer  */
 
 .footer {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   background: black;
   color: white;
 }
 .footer-links-socials {
-  display: flex;
   gap: 80px;
 }
 
@@ -400,4 +396,75 @@ body {
   padding: 16px;
   border-radius: 50%;
   background-color: var(--secondary-color);
+}
+
+[for="hamburgerMenu"] {
+  display: none;
+  cursor: pointer;
+}
+
+#hamburgerMenu {
+  display: none;
+}
+/* media query */
+@media (max-width: 768px) {
+  [for="hamburgerMenu"] {
+    display: flex;
+  }
+  .nav-link {
+    position: absolute;
+    top: 54px;
+    left: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    box-shadow: -5px 0 10px -5px rgba(0, 0, 0, 0.384);
+    z-index: 10;
+    transition: all 0.5s;
+  }
+  .nav-link ul {
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    width: 40vw;
+    height: auto;
+    gap: 40px;
+    font-size: 1.3rem;
+  }
+
+  #hamburgerMenu:checked + .nav-link {
+    left: 58vw;
+  }
+  .hero {
+    grid-template-areas:
+      "image"
+      "banner";
+  }
+  .image {
+    justify-content: center;
+  }
+  .badge {
+    flex-direction: column;
+  }
+  .divider {
+    display: none;
+  }
+  .badge {
+    width: 60vw;
+  }
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+  }
+  .my-details {
+    align-items: center;
+  }
+  .my-photo > img {
+    width: 60vw;
+  }
+  .projects .my-projects {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
 }
