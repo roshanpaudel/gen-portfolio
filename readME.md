@@ -36,7 +36,17 @@ To view the website locally, follow these steps:
     ```bash
     git clone https://github.com/roshanpaudel/gen-portfolio.git
     ```
-2.  **Open `index.html` in your web browser.**
+2.  **Navigate to the project directory:**
+    ```bash
+    cd Roshan-Portfolio
+    ```
+    - **If your project folder has a different name, adjust the command accordingly.**
+3.  **Open `index.html` in your web browser.**
+    - You can do this by double-clicking the `index.html` file in your file explorer, or by right-clicking and selecting "Open with" and choosing your preferred browser.
+
+**Important Note regarding CSS:**
+
+- Ensure that the `style.css` file is located in the same directory as `index.html` or that the path to `style.css` in the `<link>` tag within `index.html` is correct. If the browser cannot locate the css file, the site will render without styles.
 
 ## File Structure
 
