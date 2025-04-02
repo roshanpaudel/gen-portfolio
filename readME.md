@@ -24,7 +24,6 @@ The website is built using HTML, CSS, and JavaScript (with a focus on front-end)
 
 - **HTML5:** For structuring the content.
 - **CSS3:** For styling and layout.
-- **JavaScript:** For interactivity (dark mode toggle, hamburger menu).
 - **Font Awesome:** For icons.
 - **Google Fonts:** For custom fonts.
 
