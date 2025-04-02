@@ -84,3 +84,4 @@ To view the website locally, follow these steps:
 ## License
 
 This project is open source. Copyrights of the assets, fonts and icons used in this project belong to respective authors.
+v1.2 coming soon..
